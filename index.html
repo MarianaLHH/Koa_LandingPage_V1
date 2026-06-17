@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Re-Evolución KOA — Colectivo ciudadano ambiental y solidario independiente en La Paz, Bolivia. Somos naturaleza, nos estamos defendiendo." />
+  <meta property="og:title" content="Re-Evolución KOA | Colectivo Ciudadano Ambiental y Solidario" />
+  <meta property="og:description" content="Colectivo independiente y apartidario comprometido con la acción ecológica, la solidaridad y el pensamiento crítico." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1B5E20" />
+  <title>Re-Evolución KOA | Somos naturaleza, nos estamos defendiendo</title>
+
+  <!-- Fuentes: Playfair Display (titulares) + Inter (cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       SKIP LINK — Accesibilidad para navegación por teclado
+       ============================================================ -->
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- ============================================================
+       HEADER / NAVEGACIÓN
+       ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="nav-container">
+      <nav class="site-nav" aria-label="Navegación principal">
+
+        <!-- Logotipo -->
+        <a href="#inicio" class="nav-logo" aria-label="Re-Evolución KOA — Inicio">
+          <div class="logo-mark" aria-hidden="true">
+            <!-- Icono SVG: hoja con nervadura central -->
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg" aria-hidden="true">
+              <path d="M22 40 C22 40 5 28 5 15 C5 8 12.5 3 22 3 C31.5 3 39 8 39 15 C39 28 22 40 22 40Z" fill="currentColor"/>
+              <line x1="22" y1="22" x2="22" y2="40" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M22 28 C22 28 16 25 13 21" stroke="white" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.75"/>
+              <path d="M22 33 C22 33 28 30 31 26" stroke="white" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.75"/>
+            </svg>
+          </div>
+          <div class="logo-text" aria-hidden="true">
+            <span class="logo-prefix">Re-Evolución</span>
+            <span class="logo-name">KOA</span>
+          </div>
+        </a>
+
+        <!-- Botón hamburguesa (móvil) -->
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navMenu"
+          aria-label="Abrir menú de navegación"
+        >
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+
+        <!-- Menú de navegación -->
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-list" role="list">
+            <li><a href="#inicio"        class="nav-link">Inicio</a></li>
+            <li><a href="#ejes"          class="nav-link">Ejes de Acción</a></li>
+            <li><a href="#transparencia" class="nav-link">Transparencia</a></li>
+            <li><a href="#voluntariado"  class="nav-link">Voluntariado</a></li>
+            <li><a href="#contacto"      class="nav-link">Contacto</a></li>
+          </ul>
+          <a href="#voluntariado" class="btn btn-accent nav-cta">¡Únete al Voluntariado!</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       CONTENIDO PRINCIPAL
+       ============================================================ -->
+  <main id="contenido-principal" role="main">
+
+    <!-- ============================================================
+         SECCIÓN HERO
+         ============================================================ -->
+    <section class="hero-section" id="inicio" aria-labelledby="hero-heading">
+
+      <!-- Fondo decorativo -->
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-bg__pattern" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+          <path d="M80 520 C 40 380 80 240 180 180 C 280 120 380 170 380 290 C 380 400 280 480 180 520Z"
+                fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+          <path d="M620 80 C 660 220 620 360 520 420 C 420 480 320 430 320 310 C 320 200 420 110 520 80Z"
+                fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+          <circle cx="700" cy="520" r="140" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+          <circle cx="80"  cy="60"  r="90"  fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+          <line x1="0" y1="300" x2="800" y2="300" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <div class="hero-container">
+        <!-- Texto hero -->
+        <div class="hero-content">
+          <p class="hero-tagline">Colectivo Ciudadano · La Paz, Bolivia</p>
+
+          <h1 class="hero-heading" id="hero-heading">
+            Somos naturaleza,<br />
+            <em>nos estamos<br class="hero-br-mobile" /> defendiendo.</em>
+          </h1>
+
+          <p class="hero-description">
+            Un colectivo <strong>independiente y apartidario</strong> comprometido con la defensa del
+            medioambiente, la solidaridad y el pensamiento crítico en La Paz, Bolivia.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#voluntariado" class="btn btn-accent btn-lg">
+              ¡Únete al Voluntariado!
+              <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" class="btn-icon">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <a href="#ejes" class="btn btn-ghost btn-lg">Conoce Nuestros Ejes</a>
+          </div>
+
+          <div class="hero-badges" aria-label="Características del colectivo">
+            <span class="badge">Autogestionado</span>
+            <span class="badge">Sin fines de lucro</span>
+            <span class="badge">Apartidario</span>
+          </div>
+        </div>
+
+        <!-- Visual decorativo (oculto en móvil) -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-main-circle">
+            <div class="circle-label">RE-EVOLUCIÓN</div>
+            <div class="circle-brand">KOA</div>
+            <div class="circle-sub">La Paz · Bolivia</div>
+          </div>
+          <div class="hero-float-card hero-float-card--1">
+            <span class="float-icon">🌱</span>
+            <span>Verderismo</span>
+          </div>
+          <div class="hero-float-card hero-float-card--2">
+            <span class="float-icon">🤝</span>
+            <span>Solidaridad</span>
+          </div>
+          <div class="hero-float-card hero-float-card--3">
+            <span class="float-icon">🎨</span>
+            <span>Artivismo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicador de scroll -->
+      <a href="#ejes" class="hero-scroll-cue" aria-label="Desplazarse hacia los Ejes de Acción">
+        <span>Explorar</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN EJES DE ACCIÓN
+         ============================================================ -->
+    <section class="axes-section" id="ejes" aria-labelledby="axes-heading">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-tag">Nuestro Trabajo</p>
+          <h2 class="section-title" id="axes-heading">Cinco Ejes de Acción</h2>
+          <p class="section-description">
+            Cada eje representa un compromiso concreto con la vida, el territorio y la comunidad.
+          </p>
+        </header>
+
+        <div class="axes-grid" role="list" aria-label="Ejes de acción del colectivo">
+
+          <!-- Eje 1: Verderismo -->
+          <article class="axis-card axis-card--green" role="listitem" tabindex="0" aria-labelledby="eje-1-title">
+            <div class="card-top-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <span class="card-emoji">🌱</span>
+              </div>
+              <span class="card-number" aria-hidden="true">01</span>
+              <h3 class="card-title" id="eje-1-title">Verderismo</h3>
+              <p class="card-subtitle">Acción Ambiental</p>
+              <p class="card-description">
+                Acciones concretas para la defensa, restauración y cuidado de los ecosistemas,
+                la biodiversidad y los espacios naturales de nuestra región.
+              </p>
+              <ul class="card-features" aria-label="Actividades principales">
+                <li>Plantación de árboles nativos</li>
+                <li>Limpieza de espacios naturales</li>
+                <li>Educación ambiental</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Eje 2: KoÁgora -->
+          <article class="axis-card axis-card--teal" role="listitem" tabindex="0" aria-labelledby="eje-2-title">
+            <div class="card-top-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <span class="card-emoji">🎙️</span>
+              </div>
+              <span class="card-number" aria-hidden="true">02</span>
+              <h3 class="card-title" id="eje-2-title">KoÁgora</h3>
+              <p class="card-subtitle">Debate y Pensamiento Crítico</p>
+              <p class="card-description">
+                Espacio abierto de diálogo y construcción colectiva de conocimiento sobre
+                los desafíos socioambientales, políticos y culturales de nuestro tiempo.
+              </p>
+              <ul class="card-features" aria-label="Actividades principales">
+                <li>Asambleas y foros abiertos</li>
+                <li>Círculos de lectura crítica</li>
+                <li>Seminarios ciudadanos</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Eje 3: KOA Solidaria -->
+          <article class="axis-card axis-card--earth" role="listitem" tabindex="0" aria-labelledby="eje-3-title">
+            <div class="card-top-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <span class="card-emoji">🤝</span>
+              </div>
+              <span class="card-number" aria-hidden="true">03</span>
+              <h3 class="card-title" id="eje-3-title">KOA Solidaria</h3>
+              <p class="card-subtitle">Ayuda Mutua y Redes de Apoyo</p>
+              <p class="card-description">
+                Redes de ayuda mutua y acción solidaria orientadas a personas y comunidades
+                en situación de vulnerabilidad, sin distinción alguna.
+              </p>
+              <ul class="card-features" aria-label="Actividades principales">
+                <li>Brigadas de apoyo comunitario</li>
+                <li>Bancos de alimentos y recursos</li>
+                <li>Acompañamiento familiar</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Eje 4: KoArtivismo -->
+          <article class="axis-card axis-card--amber" role="listitem" tabindex="0" aria-labelledby="eje-4-title">
+            <div class="card-top-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <span class="card-emoji">🎨</span>
+              </div>
+              <span class="card-number" aria-hidden="true">04</span>
+              <h3 class="card-title" id="eje-4-title">KoArtivismo</h3>
+              <p class="card-subtitle">Creatividad y Activismo</p>
+              <p class="card-description">
+                El arte, la cultura y la creatividad como herramientas de transformación
+                social, sensibilización ambiental y resistencia pacífica.
+              </p>
+              <ul class="card-features" aria-label="Actividades principales">
+                <li>Murales y arte urbano</li>
+                <li>Performances y teatro social</li>
+                <li>Creación colectiva</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Eje 5: Koamunicación -->
+          <article class="axis-card axis-card--sky" role="listitem" tabindex="0" aria-labelledby="eje-5-title">
+            <div class="card-top-stripe" aria-hidden="true"></div>
+            <div class="card-body">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <span class="card-emoji">📡</span>
+              </div>
+              <span class="card-number" aria-hidden="true">05</span>
+              <h3 class="card-title" id="eje-5-title">Koamunicación</h3>
+              <p class="card-subtitle">Redes y Contenido Digital</p>
+              <p class="card-description">
+                Comunicación estratégica, gestión de redes sociales y producción de contenido
+                para amplificar el mensaje del colectivo y conectar con la comunidad.
+              </p>
+              <ul class="card-features" aria-label="Actividades principales">
+                <li>Gestión de redes sociales</li>
+                <li>Producción audiovisual</li>
+                <li>Boletín comunitario</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN DASHBOARD DE TRANSPARENCIA
+         ============================================================ -->
+    <section class="transparency-section" id="transparencia" aria-labelledby="transparency-heading">
+      <div class="container">
+
+        <header class="section-header section-header--light">
+          <p class="section-tag section-tag--light">Gobernanza Abierta</p>
+          <h2 class="section-title section-title--light" id="transparency-heading">Dashboard de Impacto</h2>
+          <p class="section-description section-description--light">
+            Transparencia total. Los datos son auditables por cualquier miembro de la comunidad.
+          </p>
+        </header>
+
+        <div class="impact-grid" role="list" aria-label="Indicadores de impacto del colectivo">
+
+          <div class="impact-card" role="listitem" tabindex="0">
+            <div class="impact-icon-wrap" aria-hidden="true"><span>🌳</span></div>
+            <div class="impact-counter" data-target="0">
+              <span class="counter-value" aria-live="polite" aria-atomic="true">0</span>
+            </div>
+            <p class="impact-label">Árboles plantados</p>
+            <p class="impact-sublabel">Recuperando el bosque nativo</p>
+          </div>
+
+          <div class="impact-card" role="listitem" tabindex="0">
+            <div class="impact-icon-wrap" aria-hidden="true"><span>🤲</span></div>
+            <div class="impact-counter" data-target="0">
+              <span class="counter-value" aria-live="polite" aria-atomic="true">0</span>
+            </div>
+            <p class="impact-label">Acciones solidarias</p>
+            <p class="impact-sublabel">Tejiendo redes de apoyo</p>
+          </div>
+
+          <div class="impact-card" role="listitem" tabindex="0">
+            <div class="impact-icon-wrap" aria-hidden="true"><span>💬</span></div>
+            <div class="impact-counter" data-target="0">
+              <span class="counter-value" aria-live="polite" aria-atomic="true">0</span>
+            </div>
+            <p class="impact-label">Debates realizados</p>
+            <p class="impact-sublabel">Construyendo pensamiento crítico</p>
+          </div>
+
+          <div class="impact-card" role="listitem" tabindex="0">
+            <div class="impact-icon-wrap" aria-hidden="true"><span>👥</span></div>
+            <div class="impact-counter" data-target="0">
+              <span class="counter-value" aria-live="polite" aria-atomic="true">0</span>
+            </div>
+            <p class="impact-label">Voluntarios activos</p>
+            <p class="impact-sublabel">Creciendo en comunidad</p>
+          </div>
+
+          <div class="impact-card" role="listitem" tabindex="0">
+            <div class="impact-icon-wrap" aria-hidden="true"><span>🎨</span></div>
+            <div class="impact-counter" data-target="0">
+              <span class="counter-value" aria-live="polite" aria-atomic="true">0</span>
+            </div>
+            <p class="impact-label">Acciones artivistas</p>
+            <p class="impact-sublabel">Arte que transforma</p>
+          </div>
+
+          <div class="impact-card impact-card--featured" role="listitem" tabindex="0">
+            <div class="impact-icon-wrap" aria-hidden="true"><span>🌍</span></div>
+            <div class="impact-counter" data-target="0">
+              <span class="counter-value" aria-live="polite" aria-atomic="true">0</span>
+            </div>
+            <p class="impact-label">Eventos comunitarios</p>
+            <p class="impact-sublabel">Encuentros que nos hacen colectivo</p>
+          </div>
+
+        </div>
+
+        <div class="transparency-notice" role="note">
+          <svg class="notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <p>
+            Los datos se actualizan manualmente y son auditados por la asamblea del colectivo.
+            <strong>¿Encontraste un error?</strong> Comunícanos por cualquier canal.
+            Nuestras finanzas son de acceso público bajo principios de gobernanza abierta.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN VOLUNTARIADO
+         ============================================================ -->
+    <section class="volunteer-section" id="voluntariado" aria-labelledby="volunteer-heading">
+      <div class="container">
+        <div class="volunteer-layout">
+
+          <!-- Contenido informativo -->
+          <div class="volunteer-content">
+            <p class="section-tag">Súmate</p>
+            <h2 class="volunteer-heading" id="volunteer-heading">
+              ¿Quieres ser parte<br />del cambio?
+            </h2>
+            <p class="volunteer-description">
+              En Re-Evolución KOA, cada persona importa. No pedimos experiencia previa,
+              solo ganas de aportar desde tus capacidades y compromisos.
+            </p>
+            <ul class="volunteer-values" aria-label="Principios del voluntariado">
+              <li>
+                <span class="value-check" aria-hidden="true">✓</span>
+                <span>Organización horizontal, sin jerarquías</span>
+              </li>
+              <li>
+                <span class="value-check" aria-hidden="true">✓</span>
+                <span>Sin fines de lucro ni afiliación política</span>
+              </li>
+              <li>
+                <span class="value-check" aria-hidden="true">✓</span>
+                <span>Decisiones colectivas por consenso</span>
+              </li>
+              <li>
+                <span class="value-check" aria-hidden="true">✓</span>
+                <span>Espacio seguro, diverso e inclusivo</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Formulario -->
+          <div class="volunteer-form-wrap">
+            <form class="volunteer-form" id="volunteerForm" novalidate aria-label="Formulario de voluntariado">
+              <h3 class="form-title">Quiero unirme como voluntario/a</h3>
+
+              <div class="form-group">
+                <label class="form-label" for="vol-name">
+                  Nombre completo
+                  <abbr title="Campo requerido" aria-label="requerido" class="required-mark">*</abbr>
+                </label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="vol-name"
+                  name="nombre"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-describedby="vol-name-hint"
+                  placeholder="Tu nombre y apellido"
+                />
+                <span class="form-hint" id="vol-name-hint">Cómo te identificas en el colectivo</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="vol-email">
+                  Correo electrónico
+                  <abbr title="Campo requerido" aria-label="requerido" class="required-mark">*</abbr>
+                </label>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="vol-email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  placeholder="tu@correo.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="vol-axis">Eje de interés</label>
+                <select class="form-select" id="vol-axis" name="eje">
+                  <option value="">Selecciona un eje (o todos)</option>
+                  <option value="verderismo">🌱 Verderismo — Acción Ambiental</option>
+                  <option value="koagora">🎙️ KoÁgora — Debate Crítico</option>
+                  <option value="solidaria">🤝 KOA Solidaria — Ayuda Mutua</option>
+                  <option value="koartivismo">🎨 KoArtivismo — Arte y Activismo</option>
+                  <option value="koamunicacion">📡 Koamunicación — Redes y Contenido</option>
+                  <option value="todos">🌍 Todos los ejes</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="vol-message">¿Por qué quieres unirte?</label>
+                <textarea
+                  class="form-textarea"
+                  id="vol-message"
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Cuéntanos brevemente tu motivación..."
+                  aria-describedby="vol-message-hint"
+                  maxlength="500"
+                ></textarea>
+                <span class="form-hint" id="vol-message-hint">Opcional · Máximo 500 caracteres</span>
+              </div>
+
+              <div class="form-checkbox-group">
+                <input
+                  class="form-checkbox"
+                  type="checkbox"
+                  id="vol-terms"
+                  name="terminos"
+                  required
+                  aria-required="true"
+                />
+                <label class="form-checkbox-label" for="vol-terms">
+                  Acepto los valores y el Pacto Interno del colectivo Re-Evolución KOA
+                </label>
+              </div>
+
+              <!-- Área de mensajes de validación -->
+              <div class="form-messages" id="formMessages" role="alert" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-accent btn-full btn-lg">
+                Enviar mi solicitud de voluntariado
+              </button>
+
+              <p class="form-disclaimer">
+                Tu información no se comparte con terceros.
+                Nos comunicaremos a través del correo que nos proporciones.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" id="contacto" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Marca -->
+        <div class="footer-brand">
+          <a href="#inicio" class="footer-logo-link" aria-label="Re-Evolución KOA — Ir al inicio">
+            <span class="footer-logo-mark" aria-hidden="true">KOA</span>
+            <div class="footer-logo-text" aria-hidden="true">
+              <span class="footer-logo-prefix">Re-Evolución</span>
+              <span class="footer-logo-name">KOA</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Somos naturaleza,<br />nos estamos defendiendo.
+          </p>
+          <address class="footer-address">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="address-icon" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+            La Paz, Bolivia
+          </address>
+        </div>
+
+        <!-- Navegación -->
+        <nav class="footer-nav" aria-label="Mapa del sitio">
+          <h3 class="footer-nav-title">Explorar</h3>
+          <ul class="footer-nav-list" role="list">
+            <li><a href="#ejes"          class="footer-link">Ejes de Acción</a></li>
+            <li><a href="#transparencia" class="footer-link">Transparencia</a></li>
+            <li><a href="#voluntariado"  class="footer-link">Voluntariado</a></li>
+            <li><a href="#contacto"      class="footer-link">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Ejes -->
+        <nav class="footer-nav" aria-label="Ejes del colectivo">
+          <h3 class="footer-nav-title">Nuestros Ejes</h3>
+          <ul class="footer-nav-list" role="list">
+            <li><a href="#ejes" class="footer-link">🌱 Verderismo</a></li>
+            <li><a href="#ejes" class="footer-link">🎙️ KoÁgora</a></li>
+            <li><a href="#ejes" class="footer-link">🤝 KOA Solidaria</a></li>
+            <li><a href="#ejes" class="footer-link">🎨 KoArtivismo</a></li>
+            <li><a href="#ejes" class="footer-link">📡 Koamunicación</a></li>
+          </ul>
+        </nav>
+
+        <!-- Redes y contacto -->
+        <div class="footer-contact-section">
+          <h3 class="footer-nav-title">Síguenos</h3>
+          <div class="social-links" role="list">
+
+            <a href="#" class="social-link" aria-label="Re-Evolución KOA en Instagram" role="listitem">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+
+            <a href="#" class="social-link" aria-label="Re-Evolución KOA en Facebook" role="listitem">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+
+            <a href="#" class="social-link" aria-label="Re-Evolución KOA en Twitter/X" role="listitem">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+
+            <a href="#" class="social-link" aria-label="Re-Evolución KOA en YouTube" role="listitem">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+
+          </div>
+
+          <div class="footer-email-block">
+            <p class="footer-email-label">Escríbenos</p>
+            <a href="mailto:colectivo@re-evolucionkoa.org" class="footer-email">
+              colectivo@re-evolucionkoa.org
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra inferior: Copyleft y créditos -->
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="copyleft-icon" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M14.83 14.83a4 4 0 1 1 0-5.66"/>
+            </svg>
+            Contenido bajo
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="footer-link footer-link--inline"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional (abre en nueva pestaña)">
+              Creative Commons CC BY-SA 4.0
+            </a>
+            · Copyleft comunitario.
+          </p>
+          <p>Re-Evolución KOA · Colectivo autogestionado sin fines de lucro · La Paz, Bolivia</p>
+        </div>
+        <p class="footer-credit">Hecho con 💚 por y para la comunidad</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
