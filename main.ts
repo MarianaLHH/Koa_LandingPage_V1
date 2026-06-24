@@ -225,37 +225,69 @@ class KOAApp {
   // Formulario de voluntariado — validación y feedback
   // ----------------------------------------------------------
   private initVolunteerForm(): void {
-    const form     = document.getElementById('volunteerForm') as HTMLFormElement | null;
-    const messages = document.getElementById('formMessages');
+    const form      = document.getElementById('volunteerForm') as HTMLFormElement | null;
+    const messages  = document.getElementById('formMessages');
+    const submitBtn = form?.querySelector<HTMLButtonElement>('[type="submit"]');
     if (!form || !messages) return;
 
-    form.addEventListener('submit', (e: SubmitEvent) => {
+    form.addEventListener('submit', async (e: SubmitEvent) => {
       e.preventDefault();
 
-      const name  = (form.elements.namedItem('nombre') as HTMLInputElement).value.trim();
-      const email = (form.elements.namedItem('email')  as HTMLInputElement).value.trim();
+      const name  = (form.elements.namedItem('nombre')   as HTMLInputElement).value.trim();
+      const email = (form.elements.namedItem('email')    as HTMLInputElement).value.trim();
       const terms = (form.elements.namedItem('terminos') as HTMLInputElement).checked;
 
-      // Validación básica en cliente
       const errors: string[] = [];
-      if (!name)               errors.push('El nombre es obligatorio.');
-      if (!email)              errors.push('El correo electrónico es obligatorio.');
+      if (!name)  errors.push('El nombre es obligatorio.');
+      if (!email) errors.push('El correo electrónico es obligatorio.');
       else if (!this.isValidEmail(email)) errors.push('El correo electrónico no tiene un formato válido.');
-      if (!terms)              errors.push('Debes aceptar el Pacto Interno del colectivo.');
+      if (!terms) errors.push('Debes aceptar el Pacto Interno del colectivo.');
 
       if (errors.length > 0) {
         this.showMessage(messages, errors.join(' '), 'error');
         return;
       }
 
-      // Simulación de envío exitoso
-      // TODO: Conectar con tu backend o servicio de formularios (Netlify Forms, Formspree, etc.)
-      this.showMessage(
-        messages,
-        '¡Gracias por querer unirte! Recibimos tu solicitud y nos pondremos en contacto pronto. ¡Bienvenido/a a Re-Evolución KOA!',
-        'success'
-      );
-      form.reset();
+      if (submitBtn) {
+        submitBtn.disabled    = true;
+        submitBtn.textContent = 'Enviando…';
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method:  'POST',
+          body:    new FormData(form),
+          headers: { 'Accept': 'application/json' },
+        });
+
+        if (response.ok) {
+          this.showMessage(
+            messages,
+            '¡Gracias por querer unirte! Recibimos tu solicitud y nos pondremos en contacto pronto. ¡Bienvenido/a a Re-Evolución KOA! 💚',
+            'success'
+          );
+          form.reset();
+        } else {
+          const data = await response.json().catch(() => ({})) as { errors?: { message: string }[] };
+          const serverMsg = data?.errors?.map(err => err.message).join(' ') ?? '';
+          this.showMessage(
+            messages,
+            serverMsg || 'Hubo un problema al enviar el formulario. Inténtalo de nuevo o escríbenos directamente.',
+            'error'
+          );
+        }
+      } catch {
+        this.showMessage(
+          messages,
+          'No se pudo conectar con el servidor. Verifica tu conexión e inténtalo de nuevo.',
+          'error'
+        );
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled    = false;
+          submitBtn.textContent = 'Enviar mi solicitud de voluntariado';
+        }
+      }
     });
   }
 
