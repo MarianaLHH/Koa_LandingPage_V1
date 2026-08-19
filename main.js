@@ -26,6 +26,7 @@ class KOAApp {
     this.initCardReveal();
     this.initCounterAnimation();
     this.initVolunteerForm();
+    this.initHeroCarousel();
   }
 
   // ----------------------------------------------------------
@@ -182,6 +183,45 @@ class KOAApp {
       if (progress < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
+  }
+
+  // ----------------------------------------------------------
+  // Carrusel de fondo del hero
+  // ----------------------------------------------------------
+  initHeroCarousel() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots   = document.querySelectorAll('.hero-dot');
+    if (slides.length < 2) return;
+
+    let current = 0;
+    const AUTO_ADVANCE_MS = 6000;
+    let timer;
+
+    const goTo = (index) => {
+      slides[current]?.classList.remove('is-active');
+      dots[current]?.classList.remove('is-active');
+      dots[current]?.setAttribute('aria-selected', 'false');
+
+      current = (index + slides.length) % slides.length;
+
+      slides[current]?.classList.add('is-active');
+      dots[current]?.classList.add('is-active');
+      dots[current]?.setAttribute('aria-selected', 'true');
+    };
+
+    const startAutoAdvance = () => {
+      timer = setInterval(() => goTo(current + 1), AUTO_ADVANCE_MS);
+    };
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(timer);
+        goTo(i);
+        startAutoAdvance();
+      });
+    });
+
+    startAutoAdvance();
   }
 
   // ----------------------------------------------------------

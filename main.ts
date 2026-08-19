@@ -51,6 +51,7 @@ class KOAApp {
     this.initCardReveal();
     this.initCounterAnimation();
     this.initVolunteerForm();
+    this.initHeroCarousel();
   }
 
   // ----------------------------------------------------------
@@ -219,6 +220,45 @@ class KOAApp {
     };
 
     requestAnimationFrame(tick);
+  }
+
+  // ----------------------------------------------------------
+  // Carrusel de fondo del hero
+  // ----------------------------------------------------------
+  private initHeroCarousel(): void {
+    const slides = document.querySelectorAll<HTMLElement>('.hero-slide');
+    const dots   = document.querySelectorAll<HTMLButtonElement>('.hero-dot');
+    if (slides.length < 2) return;
+
+    let current = 0;
+    const AUTO_ADVANCE_MS = 6000;
+    let timer: ReturnType<typeof setInterval>;
+
+    const goTo = (index: number): void => {
+      slides[current]?.classList.remove('is-active');
+      dots[current]?.classList.remove('is-active');
+      dots[current]?.setAttribute('aria-selected', 'false');
+
+      current = (index + slides.length) % slides.length;
+
+      slides[current]?.classList.add('is-active');
+      dots[current]?.classList.add('is-active');
+      dots[current]?.setAttribute('aria-selected', 'true');
+    };
+
+    const startAutoAdvance = (): void => {
+      timer = setInterval(() => goTo(current + 1), AUTO_ADVANCE_MS);
+    };
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(timer);
+        goTo(i);
+        startAutoAdvance();
+      });
+    });
+
+    startAutoAdvance();
   }
 
   // ----------------------------------------------------------

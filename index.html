@@ -33,9 +33,6 @@
 
         <!-- Logotipo -->
         <a href="#inicio" class="nav-logo" aria-label="Re-Evolución KOA — Inicio">
-          <div class="logo-mark" aria-hidden="true">
-            <img src="assets/logo-koa-circular.png" class="logo-img" width="60" height="60" alt="" />
-          </div>
           <div class="logo-text" aria-hidden="true">
             <span class="logo-prefix">Re-Evolución</span>
             <span class="logo-name">KOA</span>
@@ -81,6 +78,15 @@
          SECCIÓN HERO
          ============================================================ -->
     <section class="hero-section" id="inicio" aria-labelledby="hero-heading">
+
+      <!-- Carrusel de imágenes de fondo -->
+      <div class="hero-carousel" aria-hidden="true">
+        <div class="hero-slide is-active"></div>
+        <div class="hero-slide"></div>
+        <div class="hero-slide"></div>
+        <div class="hero-slide"></div>
+      </div>
+      <div class="hero-carousel-overlay" aria-hidden="true"></div>
 
       <!-- Fondo decorativo -->
       <div class="hero-bg" aria-hidden="true">
@@ -145,6 +151,14 @@
         </div>
       </div>
 
+      <!-- Indicadores del carrusel -->
+      <div class="hero-carousel-dots" role="tablist" aria-label="Seleccionar imagen del carrusel">
+        <button class="hero-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Imagen 1 de 4"></button>
+        <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Imagen 2 de 4"></button>
+        <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Imagen 3 de 4"></button>
+        <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Imagen 4 de 4"></button>
+      </div>
+
       <!-- Indicador de scroll -->
       <a href="#ejes" class="hero-scroll-cue" aria-label="Desplazarse hacia los Ejes de Acción">
         <span>Explorar</span>
@@ -171,13 +185,13 @@
         <div class="axes-grid" role="list" aria-label="Ejes de acción del colectivo">
 
           <!-- Eje 1: Verderismo -->
-          <article class="axis-card axis-card--green" role="listitem" tabindex="0" aria-labelledby="eje-1-title">
-            <div class="card-top-stripe" aria-hidden="true"></div>
-            <div class="card-body">
-              <div class="card-icon-wrap" aria-hidden="true">
+          <a href="eje-verderismo.html" class="axis-card axis-card--green" role="listitem" aria-labelledby="eje-1-title">
+            <div class="card-image" aria-hidden="true">
+              <div class="card-icon-wrap">
                 <span class="card-emoji">🌱</span>
               </div>
-              <span class="card-number" aria-hidden="true">01</span>
+            </div>
+            <div class="card-body">
               <h3 class="card-title" id="eje-1-title">Verderismo</h3>
               <p class="card-subtitle">Acción Ambiental</p>
               <p class="card-description">
@@ -189,17 +203,23 @@
                 <li>Limpieza de espacios naturales</li>
                 <li>Educación ambiental</li>
               </ul>
+              <span class="card-more">
+                Conoce este eje
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </span>
             </div>
-          </article>
+          </a>
 
           <!-- Eje 2: KoÁgora -->
-          <article class="axis-card axis-card--teal" role="listitem" tabindex="0" aria-labelledby="eje-2-title">
-            <div class="card-top-stripe" aria-hidden="true"></div>
-            <div class="card-body">
-              <div class="card-icon-wrap" aria-hidden="true">
+          <a href="eje-koagora.html" class="axis-card axis-card--teal" role="listitem" aria-labelledby="eje-2-title">
+            <div class="card-image" aria-hidden="true">
+              <div class="card-icon-wrap">
                 <span class="card-emoji">🎙️</span>
               </div>
-              <span class="card-number" aria-hidden="true">02</span>
+            </div>
+            <div class="card-body">
               <h3 class="card-title" id="eje-2-title">KoÁgora</h3>
               <p class="card-subtitle">Debate y Pensamiento Crítico</p>
               <p class="card-description">
@@ -211,17 +231,23 @@
                 <li>Círculos de lectura crítica</li>
                 <li>Seminarios ciudadanos</li>
               </ul>
+              <span class="card-more">
+                Conoce este eje
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </span>
             </div>
-          </article>
+          </a>
 
           <!-- Eje 3: KOA Solidaria -->
-          <article class="axis-card axis-card--earth" role="listitem" tabindex="0" aria-labelledby="eje-3-title">
-            <div class="card-top-stripe" aria-hidden="true"></div>
-            <div class="card-body">
-              <div class="card-icon-wrap" aria-hidden="true">
+          <a href="eje-koa-solidaria.html" class="axis-card axis-card--earth" role="listitem" aria-labelledby="eje-3-title">
+            <div class="card-image" aria-hidden="true">
+              <div class="card-icon-wrap">
                 <span class="card-emoji">🤝</span>
               </div>
-              <span class="card-number" aria-hidden="true">03</span>
+            </div>
+            <div class="card-body">
               <h3 class="card-title" id="eje-3-title">KOA Solidaria</h3>
               <p class="card-subtitle">Ayuda Mutua y Redes de Apoyo</p>
               <p class="card-description">
@@ -233,17 +259,23 @@
                 <li>Bancos de alimentos y recursos</li>
                 <li>Acompañamiento familiar</li>
               </ul>
+              <span class="card-more">
+                Conoce este eje
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </span>
             </div>
-          </article>
+          </a>
 
           <!-- Eje 4: KoArtivismo -->
-          <article class="axis-card axis-card--amber" role="listitem" tabindex="0" aria-labelledby="eje-4-title">
-            <div class="card-top-stripe" aria-hidden="true"></div>
-            <div class="card-body">
-              <div class="card-icon-wrap" aria-hidden="true">
+          <a href="eje-koartivismo.html" class="axis-card axis-card--amber" role="listitem" aria-labelledby="eje-4-title">
+            <div class="card-image" aria-hidden="true">
+              <div class="card-icon-wrap">
                 <span class="card-emoji">🎨</span>
               </div>
-              <span class="card-number" aria-hidden="true">04</span>
+            </div>
+            <div class="card-body">
               <h3 class="card-title" id="eje-4-title">KoArtivismo</h3>
               <p class="card-subtitle">Creatividad y Activismo</p>
               <p class="card-description">
@@ -255,17 +287,23 @@
                 <li>Performances y teatro social</li>
                 <li>Creación colectiva</li>
               </ul>
+              <span class="card-more">
+                Conoce este eje
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </span>
             </div>
-          </article>
+          </a>
 
           <!-- Eje 5: Koamunicación -->
-          <article class="axis-card axis-card--sky" role="listitem" tabindex="0" aria-labelledby="eje-5-title">
-            <div class="card-top-stripe" aria-hidden="true"></div>
-            <div class="card-body">
-              <div class="card-icon-wrap" aria-hidden="true">
+          <a href="eje-koamunicacion.html" class="axis-card axis-card--sky" role="listitem" aria-labelledby="eje-5-title">
+            <div class="card-image" aria-hidden="true">
+              <div class="card-icon-wrap">
                 <span class="card-emoji">📡</span>
               </div>
-              <span class="card-number" aria-hidden="true">05</span>
+            </div>
+            <div class="card-body">
               <h3 class="card-title" id="eje-5-title">Koamunicación</h3>
               <p class="card-subtitle">Redes y Contenido Digital</p>
               <p class="card-description">
@@ -277,8 +315,14 @@
                 <li>Producción audiovisual</li>
                 <li>Boletín comunitario</li>
               </ul>
+              <span class="card-more">
+                Conoce este eje
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </span>
             </div>
-          </article>
+          </a>
 
         </div>
       </div>
@@ -560,11 +604,11 @@
         <nav class="footer-nav" aria-label="Ejes del colectivo">
           <h3 class="footer-nav-title">Nuestros Ejes</h3>
           <ul class="footer-nav-list" role="list">
-            <li><a href="#ejes" class="footer-link">🌱 Verderismo</a></li>
-            <li><a href="#ejes" class="footer-link">🎙️ KoÁgora</a></li>
-            <li><a href="#ejes" class="footer-link">🤝 KOA Solidaria</a></li>
-            <li><a href="#ejes" class="footer-link">🎨 KoArtivismo</a></li>
-            <li><a href="#ejes" class="footer-link">📡 Koamunicación</a></li>
+            <li><a href="eje-verderismo.html"    class="footer-link">🌱 Verderismo</a></li>
+            <li><a href="eje-koagora.html"       class="footer-link">🎙️ KoÁgora</a></li>
+            <li><a href="eje-koa-solidaria.html" class="footer-link">🤝 KOA Solidaria</a></li>
+            <li><a href="eje-koartivismo.html"   class="footer-link">🎨 KoArtivismo</a></li>
+            <li><a href="eje-koamunicacion.html" class="footer-link">📡 Koamunicación</a></li>
           </ul>
         </nav>
 

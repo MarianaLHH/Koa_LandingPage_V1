@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "PowerShell(cmdkey /delete:LegacyGeneric:target=git:https://github.com)",
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "Bash(python3 -c ' *)",
+      "Bash(command -v magick)",
+      "Bash(command -v convert)",
+      "Bash(command -v identify)",
+      "Bash(command -v ffmpeg)",
+      "Skill(run)",
+      "Skill(run:*)"
     ]
   }
 }
