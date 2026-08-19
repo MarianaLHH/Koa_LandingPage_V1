@@ -616,37 +616,13 @@ button, input, select, textarea {
   animation: float 6s ease-in-out infinite;
 }
 
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50%      { transform: translate(-50%, -50%) translateY(-10px); }
+}
+
 /* Clases legacy — mantener para no romper si se usan en otro lugar */
 .circle-label, .circle-brand, .circle-sub { display: none; }
-
-/* Tarjetas flotantes */
-.hero-float-card {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-  padding: var(--sp-2) var(--sp-4);
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: var(--radius-lg);
-  color: white;
-  font-size: var(--text-sm);
-  font-weight: 500;
-  white-space: nowrap;
-  animation: float 5s ease-in-out infinite;
-}
-
-.float-icon { font-size: 1.1rem; }
-
-.hero-float-card--1 { top: 8%;  left: 0%;   animation-delay: 0s; }
-.hero-float-card--2 { top: 50%; left: -8%;  animation-delay: -1.8s; }
-.hero-float-card--3 { top: 80%; left: 20%;  animation-delay: -3.4s; }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
-}
 
 /* Indicador de scroll */
 .hero-scroll-cue {
